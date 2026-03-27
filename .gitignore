@@ -1,0 +1,12 @@
+# CLAUDE.md はClaude Codeが自動認識するため追跡する
+# 以下は不要なファイルの除外ルール
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
