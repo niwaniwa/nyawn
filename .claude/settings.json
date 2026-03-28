@@ -3,7 +3,12 @@
 		"PostToolUse": [
 			{
 				"matcher": "Edit|Write",
-				"command": "pnpm lint:fix"
+				"hooks": [
+					{
+						"type": "command",
+						"command": "pnpm lint:fix"
+					}
+				]
 			}
 		]
 	}
