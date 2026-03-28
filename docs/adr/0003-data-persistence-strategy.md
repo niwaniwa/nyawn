@@ -1,7 +1,7 @@
 ---
 id: "0003"
 title: "データ永続化戦略"
-status: wip
+status: accepted
 created: 2026-03-28
 updated: 2026-03-28
 decision_owner: ""
