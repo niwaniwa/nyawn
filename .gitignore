@@ -10,3 +10,14 @@ Thumbs.db
 .vscode/
 *.swp
 *.swo
+
+# Dependencies
+node_modules/
+
+# Build
+dist/
+
+# Environment
+.env
+.env.*
+!.env.example
