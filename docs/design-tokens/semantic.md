@@ -6,10 +6,16 @@ Primitive トークンに意味を持たせたもの。用途・役割で命名�
 
 | トークン名 | 参照先 | 意味 |
 | --- | --- | --- |
-| `color-primary` | `color-blue-500` | ブランドのメインカラー |
+| `color-primary` | `color-pink-400` | ブランドのメインカラー |
+| `color-primary-light` | `color-pink-300` | メインカラーの淡い版 |
+| `color-accent` | `color-lavender-400` | アクセントカラー |
+| `color-accent-light` | `color-lavender-300` | アクセントの淡い版 |
 | `color-background` | `color-white` | ページ背景 |
 | `color-surface` | `color-gray-100` | カード・パネルの背景 |
 | `color-text` | `color-gray-900` | 本文テキスト |
+| `color-text-secondary` | `color-gray-600` | 補足テキスト |
+| `color-text-placeholder` | `color-gray-400` | プレースホルダー |
+| `color-border` | `color-gray-200` | 汎用ボーダー |
 | `color-error` | `color-red-500` | エラー表示 |
 | `color-success` | `color-green-500` | 成功表示 |
 
@@ -31,3 +37,11 @@ Primitive トークンに意味を持たせたもの。用途・役割で命名�
 | `font-caption` | `font-size-sm` | キャプション・補足 |
 | `font-heading` | `font-size-xl` | 見出し |
 | `font-title` | `font-size-2xl` | ページタイトル |
+| `font-display` | `font-size-lg` | カード上の表示名等 |
+
+## シャドウ
+
+| トークン名 | 参照先 | 意味 |
+| --- | --- | --- |
+| `shadow-card` | `shadow-soft` | カード・パネルのやわらかい影 |
+| `shadow-elevated` | `shadow-lg` | 浮き上がった要素の影 |
