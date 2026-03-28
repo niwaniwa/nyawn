@@ -1,7 +1,7 @@
 ---
 id: "0002"
 title: "プロフィールカード データモデル"
-status: wip
+status: accepted
 phase: mvp
 created: 2026-03-28
 updated: 2026-03-28
@@ -28,9 +28,11 @@ related_adr: ["0003"]
   - `bio` — ひとこと紹介文（任意）
   - `vrcId` — VRChat ID（任意）
   - `socialLinks` — SNSリンクの配列（任意、最大3件）
+- MUST: 対応SNSプラットフォーム: x, youtube, twitch, discord, github, misskey
 - MUST: 選択中のテンプレートIDを保持できること
 - MUST: localStorageに自動保存され、ブラウザ再起動後に復元できること
 - SHOULD: データスキーマにバージョン番号を持ち、将来的なマイグレーションに対応できること
+- MUST: 未入力のSNSリンクはカード上に表示しないこと
 - COULD: 入力中の一時データと保存済みデータの区別
 
 ### 非機能要件
@@ -58,7 +60,7 @@ related_adr: ["0003"]
 ### TypeScript 型定義
 
 ```typescript
-type SocialPlatform = "x" | "youtube" | "twitch" | "discord" | "github";
+type SocialPlatform = "x" | "youtube" | "twitch" | "discord" | "github" | "misskey";
 
 interface SocialLink {
   platform: SocialPlatform;
@@ -122,8 +124,8 @@ interface AppState {
 - [ ] schemaVersion が保持され、将来的なマイグレーションの基盤がある
 - [ ] バリデーションルールが実装され、不正な入力を防止できる
 
-## 未解決事項
+## 解決済み事項
 
-- socialLinks の対応プラットフォーム一覧は確定で良いか（x, youtube, twitch, discord, github）
-- displayName の最大文字数（30文字で十分か）
-- vrcId のフォーマット検証をどこまで厳密にするか
+- socialLinks の対応プラットフォーム一覧 → x, youtube, twitch, discord, github, misskey の6種に決定
+- displayName の最大文字数 → 30文字に決定
+- vrcId のフォーマット検証 → ゆるくチェック（`usr_` プレフィックスのみ）に決定
